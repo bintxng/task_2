@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Detail Pendaftar</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Detail Informasi Pendaftar</h1>
+        <div class="info-box">
+            <p>Nama: <span id="nama"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Telepon: <span id="telepon"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Mengambil data dari query string dan menampilkannya
+        const params = new URLSearchParams(window.location.search);
+        const nama = params.get('nama');
+        const email = params.get('email');
+        const telepon = params.get('telepon');
+        
+        document.getElementById('nama').textContent = nama;
+        document.getElementById('email').textContent = email;
+        document.getElementById('telepon').textContent = telepon;
+    </script>
+</body>
+</html>
